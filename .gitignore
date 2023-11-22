@@ -1,3 +1,5 @@
 trash/
 images/
 key.py
+.gitignore
+.DS_Store
