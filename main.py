@@ -2,6 +2,8 @@ import openai
 import requests
 import key
 
+#Для тестового пуша и коммита
+
 #Настройки для подключения к API GPT
 openai.api_key = key.api_gpt
 openai.api_base = "https://api.proxyapi.ru/openai/v1"
