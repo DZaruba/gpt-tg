@@ -4,11 +4,12 @@ import schedule
 import time
 import key
 
+#Настройки для подключения к api GPT 
 openai.api_key = key.api_gpt
 openai.api_base = "https://api.proxyapi.ru/openai/v1"
 #openai.default_headers = {"x-foo": "true"}
 
-
+#Структура запроса
 chat_completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo", 
     messages=[
@@ -20,9 +21,11 @@ chat_completion = openai.ChatCompletion.create(
     ]
 )
 
+#Выполнение запроса
 text_mess = chat_completion.choices[0].message.content[1:-1]
 print(text_mess)
 
+#Отправка запроса в канал или чат ТГ
 tg_token = key.tg_token
 id_chat = key.tg_chat
 
