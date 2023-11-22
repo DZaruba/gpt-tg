@@ -1,7 +1,5 @@
 import openai
 import requests
-import schedule
-import time
 import key
 
 #Настройки для подключения к api GPT 
